@@ -1,0 +1,64 @@
+.faq-title {
+  margin-top: 15%;
+  margin-bottom: 5%;
+  letter-spacing: 2rem;
+  font-size: var(--font-size-mammoth);
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-bolder);
+  display: inline-block;
+  position: relative;
+  color: var(--accent);
+  text-align: center; /* Add this line */
+}
+
+/* Rest of your CSS... */
+
+.faq-title:hover {
+  cursor: pointer;
+}
+
+.faq-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+/* accordian style below */
+
+.accord {
+  cursor: pointer;
+  padding: 18px;
+  /*width: 100%;*/
+  border: solid 2px var(--primary);
+  outline: none;
+  font-size: 15px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media (max-width: 1500px) {
+  .title{
+    font-size: var(--font-size-xhuge);
+    letter-spacing: 1rem;
+  }
+}
+
+@media (max-width: 970px) {
+  .title{
+    font-size: var(--font-size-xlarge);
+    letter-spacing: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title{
+    font-size: var(--font-size-huge);
+    letter-spacing: 1rem;
+  }  
+  .faq-title:hover:after {
+    transform: scaleX(0);
+  }
+}

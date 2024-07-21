@@ -1,0 +1,80 @@
+.login {
+  display: flex;
+  background-image: url("/background-auth2.svg");
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the background */
+}
+
+.login-left {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction : column;
+  background-color: var(--secondary);
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  height: 90vh;
+  width: 65%;
+  margin: 1.5rem;
+  box-shadow: 0 12px 24px var(--background);
+
+}
+
+.login-right {
+  height: 100vh;
+  width: 50%;
+  background: url(/auth.svg) no-repeat center;
+  background-size: cover;
+}
+
+
+
+.login-btn{
+  width: auto;
+  height: auto;
+  margin-top: 5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  outline: none;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--background);
+  font-family: var(--cta-font);
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s ease-in-out;
+  letter-spacing: 0.1em;
+}
+.login-btn:hover{
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--accent);
+}
+
+.input-email{
+  width: 54.8%;
+  height: 55px;
+  margin: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2em;
+  outline: none;
+  background: transparent;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  color: var(--text);
+  font-family: var(--form-font);
+}

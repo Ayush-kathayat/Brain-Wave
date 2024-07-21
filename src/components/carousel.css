@@ -1,0 +1,23 @@
+
+.slick-slide {
+  margin-left: 25px; 
+  margin-right : 25px;
+
+}
+
+.slick-track{
+  display: flex;
+  align-items: center;
+}
+
+.testi-right > h2{
+  font-family : var(--secondary-font);
+  font-size : var(--font-size-xmammoth);
+}
+
+
+.testi-right > p{
+  font-family : var(--primary-font);
+  line-height : 1.8rem;
+  letter-spacing : 0.1rem;
+}

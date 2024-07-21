@@ -1,0 +1,135 @@
+.register {
+  display: flex;
+  background-image: url("/background-auth.svg");
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the background */
+}
+.register-right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-left {
+  height: 100vh;
+  width: 50%;
+  background: url(/auth-2.svg) no-repeat center;
+  background-size: cover;
+}
+
+.form-wrapper {
+  display: flex;
+  background-color: var(--secondary);
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  height: 90vh;
+  width: 65%;
+  margin: 1.5rem;
+  box-shadow: 0 12px 24px var(--background);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 2rem;
+}
+
+.input {
+  width: 60%;
+  height: 55px;
+  margin: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2em;
+  outline: none;
+  background: transparent;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  color: var(--text);
+  font-family: var(--form-font);
+}
+
+.form-title-wrapper {
+  background-color: var(--background);
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-title {
+  font-size: var(--font-size-mammoth);
+  color: var(--text);
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  width: auto;
+  height: auto;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  outline: none;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--background);
+  font-family: var(--cta-font);
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s ease-in-out;
+  letter-spacing: 0.1em;
+}
+
+.form-errors {
+  color: var(--error);
+  font-family: var(--cta-font);
+}
+
+.btn:hover {
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--accent);
+}
+
+.auth-link {
+  color: var(--text);
+  font-family: var(--cta-font);
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.psswd-input {
+  position: relative;
+}
+
+.input-pass {
+  width: 88%;
+  margin-right: 6rem;
+}
+
+.eye-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 40px; /* Adjust as needed */
+  right: 45px; /* Adjust as needed */
+}
+
+.submit-btn {
+  margin-top: 5rem;
+}
