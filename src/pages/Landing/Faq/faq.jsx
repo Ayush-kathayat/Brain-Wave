@@ -7,7 +7,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-
 const theme = createTheme({
   components: {
     MuiAccordion: {
@@ -40,66 +39,65 @@ const Faq = () => {
       <ThemeProvider theme={theme}>
         <Accordion className="accord">
           <AccordionSummary>
-            <Typography className="ques">
-              Question: How do I create an account on your to-do list website?{" "}
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Question 1: How can I upload and organize my course content?{" "}
             </Typography>
           </AccordionSummary>
 
           <AccordionDetails>
-            <Typography>
-              Answer: To create an account, click on the "Sign Up" button
-              located at the top right corner of the homepage. Enter your
-              desired username, email, and password, then click "Create
-              Account". After signing up, you can log in to your account using
-              your credentials.
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Answer: You can easily upload your course content, including
+              links, images, and PDFs, through our intuitive interface. Simply
+              create a new module, add your content, and categorize it to keep
+              everything organized and easily accessible.
             </Typography>
           </AccordionDetails>
         </Accordion>
 
         <Accordion className="accord">
           <AccordionSummary>
-            <Typography>
-              Question: How can I add a task to my to-do list?
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Question 2: Is my data secure on this platform?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Answer: To add a task, first log in to your account. Once logged
-              in, click on the "+ Task" button located at the top right corner
-              of the dashboard. A form will appear where you can enter the
-              details of your task, including the title, description, due date,
-              and category. After filling in the details, click "Save Task" to
-              add the task to your to-do list.
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Answer: Yes, your data is secure. We use industry-standard
+              security practices and robust authentication mechanisms to ensure
+              that only you can access and modify your content. All data is
+              stored securely in our backend database.
             </Typography>
           </AccordionDetails>
         </Accordion>
 
         <Accordion className="accord">
           <AccordionSummary>
-            <Typography>Question: How can I categorize my tasks? </Typography>
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Question 3: Can I access my content from multiple devices?
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Answer: Our to-do list website allows you to categorize your tasks
-              based on their importance, urgency, or any other criteria that
-              suits your needs. When adding a task, select the appropriate
-              category from the dropdown menu in the task creation form.
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Answer: Absolutely! Our platform supports cross-device
+              synchronization, so you can access your content from any device,
+              anywhere. Any changes you make will be reflected across all your
+              devices, ensuring a seamless experience.
             </Typography>
           </AccordionDetails>
         </Accordion>
 
         <Accordion className="accord">
           <AccordionSummary>
-            <Typography>
-              Question: What happens if I forget my password?
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Question 4: What happens if I forget my password?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Answer: If you forget your password, don't worry! Click on the
-              "Forgot Password?" link located below the login form. Enter your
-              registered email address and follow the instructions sent to your
-              email to reset your password.
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Answer:If you forget your password, you can easily reset it using
+              the "Forgot Password" feature on the login page. Follow the
+              instructions to reset your password and regain access to your
+              account securely.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -109,4 +107,3 @@ const Faq = () => {
 };
 
 export default Faq;
-

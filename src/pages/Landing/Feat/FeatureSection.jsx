@@ -26,12 +26,11 @@ const Feat = () => {
             data-aos-easing="ease-in-out"
           >
             <div className="content">
-              <h2>Create tasks and To-Do lists easily. </h2>
+              <h2>Secure Content Management</h2>
               <p className="para">
-                Our web app allow users to create tasks and to-do lists quickly
-                and easily. This Web app include a user-friendly interface and
-                the ability to set due dates, priority levels, and reminders for
-                each task
+                Safely save and manage all your course content, including links,
+                images, and PDFs. Our secure backend ensures your data is
+                protected and always accessible.
               </p>
             </div>
           </div>
@@ -44,12 +43,11 @@ const Feat = () => {
             data-aos-easing="ease-in-out"
           >
             <div className="content">
-              <h2>Create tasks and To-Do lists easily. </h2>
+              <h2>Personalized Learning Modules</h2>
               <p className="para">
-                Our web app allow users to create tasks and to-do lists quickly
-                and easily. This Web app include a user-friendly interface and
-                the ability to set due dates, priority levels, and reminders for
-                each task
+                Create custom modules to categorize and streamline your course
+                materials. Personalize your learning journey with tailored
+                content organization.
               </p>
             </div>
           </div>
@@ -66,12 +64,11 @@ const Feat = () => {
             data-aos-easing="ease-in-out"
           >
             <div className="content">
-              <h2>Create tasks and To-Do lists easily. </h2>
+              <h2>User Authentication and Security </h2>
               <p className="para">
-                Our web app allow users to create tasks and to-do lists quickly
-                and easily. This Web app include a user-friendly interface and
-                the ability to set due dates, priority levels, and reminders for
-                each task
+                Enjoy robust authentication to keep your data secure. Only
+                authenticated users can access and modify their content,
+                ensuring privacy and integrity.
               </p>
             </div>
           </div>
@@ -84,17 +81,15 @@ const Feat = () => {
             data-aos-easing="ease-in-out"
           >
             <div className="content">
-              <h2>Create tasks and To-Do lists easily. </h2>
+              <h2>Cross-Device Sync </h2>
               <p className="para">
-                Our web app allow users to create tasks and to-do lists quickly
-                and easily. This Web app include a user-friendly interface and
-                the ability to set due dates, priority levels, and reminders for
-                each task
+                Access your organized content from any device, anywhere. Our
+                backend synchronization ensures your updates are reflected
+                across all your devices for a seamless experience.
               </p>
             </div>
           </div>
         </div>
-        
       </div>
     </>
   );

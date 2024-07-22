@@ -69,7 +69,7 @@
 .hero-cta-btn:hover {
   background-color: var(--background);
   transition: all 0.5s ease-in-out;
-  scale : 1.01;
+  scale: 1.01;
 }
 
 /* 
@@ -172,6 +172,20 @@
   transform: translate(-40px, -30px);
 }
 
+
+.hexa {
+  transition: all 0.5s ease-in-out;
+}
+
+.hexa:hover {
+  scale: 0.8;
+  cursor: pointer;
+}
+
+
+
+
+
 .us,
 .we {
   display: flex;
@@ -223,12 +237,14 @@
     height: 120.22px;
     transform: translate(-35px, -18px);
   }
-}
-
-@media (max-width: 1200px) {
   .hero_title {
     font-size: var(--font-size-xlarge);
   }
+
+  .hero-title-span {
+    font-size: var(--font-size-xxmammoth);
+  }
+
 
   .hero_para {
     font-size: var(--font-size-normal);
@@ -257,6 +273,10 @@
     font-size: var(--font-size-mammoth);
   }
 
+  .hero-title-span {
+    font-size: var(--font-size-xmammoth);
+  }
+
   .hero_para {
     font-size: var(--font-size-large);
   }
@@ -276,15 +296,4 @@
   }
 }
 
-.hexa {
-  transition: all 0.5s ease-in-out;
-}
 
-.hexa:hover {
-  scale: 0.8;
-}
-
-.hexa:hover,
-.hexa:active {
-  scale: 0.8;
-}
