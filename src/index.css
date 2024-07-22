@@ -34,6 +34,7 @@
   --primary: hsl(160, 59%, 49%);
   --secondary: hsl(160, 58%, 11%);
   --accent: hsl(160, 59%, 51%);
+  --visited: #a7e2b4;
 
   /* Theme-3 */
 
@@ -42,7 +43,6 @@
   --primary: #444241;
   --secondary: #262527;
   --accent: #00ffff; */
-  --visited: #eeeeee;
   --error: #ff204e;
   
   

@@ -13,21 +13,20 @@ const Hero = () => {
       data-aos-easing="ease-in-out"
     >
       <div className="hero_left">
-        <h1 className="hero_title">Stay on Top of Your Tasks with Taskopia</h1>
+        <h1 className="hero_title">
+          <span className="hero-title-span">"Organize Smarter"</span> Modules, Links, Images & PDFs in One Place!
+        </h1>
         <div className="hero_para_container">
           <p className="hero_para">
-            Welcome to Taskopia - the ultimate solution for keeping your to-do
-            list organized and efficient. With our user-friendly interface, you
-            can easily manage your tasks, set reminders, and track your
-            progress.
+            Our platform allows you to effortlessly create and categorize course
+            content. Whether you’re an educator, a student, or a lifelong
+            learner, our intuitive interface makes it easy to compile and manage
+            all your learning resources in one place.
           </p>
           <Link to="/login">
-          <button className="hero-cta-btn">Create New Task</button>
+            <button className="hero-cta-btn"> Start Now </button>
           </Link>
         </div>
-
-
-
       </div>
 
       {/* right side1 */}
