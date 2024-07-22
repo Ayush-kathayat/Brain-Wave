@@ -37,7 +37,7 @@ const Nav = ({ isAuthenticated }) => {
         <div className={showMobMenu ? "active nav" : "nav"}>
           <div className="logo-title">
             <Link to="/">
-              <h1 className="app-name">Taskopia</h1>
+              <h1 className="app-name">Brain Wave</h1>
             </Link>
           </div>
 
