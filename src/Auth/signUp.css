@@ -9,7 +9,8 @@
   width: 50%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -26,8 +27,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 25px;
-  height: 90vh;
-  width: 65%;
+  height: 80vh;
+  width: 60%;
   margin: 1.5rem;
   box-shadow: 0 12px 24px var(--background);
 }
@@ -132,4 +133,14 @@
 
 .submit-btn {
   margin-top: 5rem;
+}
+
+.logo-title-sign {
+  font-size: 2.5em;
+  font-family: var(--cta-font);
+  color: var(--accent);
+  margin-top: 1rem;
+  position: absolute;
+  top: 0;
+  left: 97rem;
 }

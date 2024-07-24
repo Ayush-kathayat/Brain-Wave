@@ -13,11 +13,16 @@ import { LineWave } from "react-loader-spinner";
 
 import { Link } from "react-router-dom";
 
+//! importing nav component
+import Nav from "../components/Navbar";
+
 import "./login.css";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [activeInputPassword, setActiveInputPassword] = useState(false);
+  const auth = "login";
+
   const notifySuccess = (message) =>
     toast.success(message, {
       position: "top-right",
@@ -86,6 +91,12 @@ const Login = () => {
 
   return (
     <>
+      {/* <Nav /> */}
+      <div className="logo-title-login">
+        <Link to="/">
+          <h1 className="app-name-login">Brain Wave</h1>
+        </Link>
+      </div>
       <div className="login">
         <div className="login-left">
           <form
