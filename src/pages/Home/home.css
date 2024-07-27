@@ -1,0 +1,27 @@
+.nothing-here-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.nothing-here-title{
+    margin : 1.5rem;
+    font-size : var(--font-size-xxmammoth);
+    font-weight: var(--font-weight-bolder);
+    font-family: var(--cta-font);
+}
+
+.nothing-here-para{
+    font-size : var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--cta-font);
+
+}
+
+.nothing-here-svg{
+  filter: drop-shadow(0 0 15px var(--secondary));
+
+}

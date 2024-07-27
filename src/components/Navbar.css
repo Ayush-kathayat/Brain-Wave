@@ -31,6 +31,7 @@
 
 .app-name {
   font-size: var(--font-size-mammoth);
+  font-family: var(--heading-font);
   color: var(--accent);
 }
 
