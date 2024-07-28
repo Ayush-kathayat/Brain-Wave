@@ -1,0 +1,29 @@
+.btn-wrapper {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--visited);
+  border-radius: 10px;
+  margin-top: 5rem;
+  margin-right: 7rem;
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  width: 6rem;
+  margin: 1rem 1.5rem;
+  color: var(--accent);
+  font-weight: var(--font-weight-bolder);
+  font-size: var(--font-size-xlarge);
+  font-family: var(--cta-font);
+}
+
+.add-btn > span {
+  font-size: var(--font-size-mammoth);
+}
