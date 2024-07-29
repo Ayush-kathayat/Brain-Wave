@@ -33,14 +33,17 @@ const AddResources = () => {
         {isDropdownVisible && (
           <div className="drop-down">
             <div className="create-module">
+              <img src="./folder.svg" alt="module" />
               <h1 className="create-module-title"> Create Module</h1>
             </div>
             
             <div className="add-link">
+              <img src="./link.svg" alt="" />
               <h1 className="add-link-title">Add a Link</h1>
             </div>
 
             <div className="upload">
+              <img src="./upload.svg" alt="" />
               <h1 className="upload-title">Upload</h1>
             </div>
           </div>
