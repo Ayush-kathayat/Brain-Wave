@@ -18,9 +18,13 @@ const Home = () => {
         {data ? (
           <></>
         ) : (
-          <div className="nothing-here-container">
-            {/* //! the thing is here will be a component which will be used irrespective of if the data is there or not */}
-
+          <div
+            className="nothing-here-container"
+            data-aos="fade-down"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          s>
             <AddResources />
             <div className="nothing-here-wrapper">
               <img
