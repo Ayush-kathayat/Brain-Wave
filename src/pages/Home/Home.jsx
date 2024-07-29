@@ -35,7 +35,7 @@ const Home = () => {
               <h1 className="nothing-here-title">Nothing Added Here Yet</h1>
               <p className="nothing-here-para">
                 {" "}
-                Click on the [ + ] add button to add items in this course.{" "}
+                Click on the add button to add items in this course.{" "}
               </p>
             </div>
           </div>
