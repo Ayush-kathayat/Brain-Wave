@@ -37,20 +37,24 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: stretch;
+  position: relative; /* Ensure the dropdown is positioned relative to this wrapper */
 }
 
 .drop-down {
   position: absolute;
-  height: 10rem; /* Adjust as needed */
-  width: 20rem; /* Adjust as needed */
-  top: 18rem; /* Adjust as needed */
-  left: 89.4rem;
+  height: auto; /* Adjust as needed */
+  width: 100%; /* Full width on smaller screens */
+  max-width: 20rem; /* Maximum width */
+  top: 100%; /* Position below the button */
+  left: -41%;
   background-color: var(--secondary);
   border: 1px solid var(--visited);
   border-radius: 15px;
   padding: 1rem;
+  margin-top : 1rem;
   z-index: 1000; /* Ensure it appears above other elements */
   transition: all 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .create-module,
@@ -86,4 +90,31 @@
 .upload:hover {
   opacity: 1;
   background-color: var(--background);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .btn-wrapper {
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+
+  .drop-down {
+    width: 90%; /* Adjust width for smaller screens */
+    left: 5%; /* Center the dropdown */
+    top: 100%; /* Position below the button */
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-wrapper {
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .drop-down {
+    width: 100%; /* Full width on very small screens */
+    left: 0; /* Align to the left */
+    top: 100%; /* Position below the button */
+  }
 }
