@@ -51,7 +51,7 @@
   border: 1px solid var(--visited);
   border-radius: 15px;
   padding: 1rem;
-  margin-top : 1rem;
+  margin-top: 1rem;
   z-index: 1000; /* Ensure it appears above other elements */
   transition: all 0.5s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -64,6 +64,7 @@
   border-radius: 8px;
   transition: background-color 0.5s ease;
   display: flex;
+  align-items: center;
   opacity: 0.6;
   cursor: pointer;
 }
@@ -93,28 +94,30 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .btn-wrapper {
-    margin-right: 2rem;
-    margin-top: 2rem;
-  }
 
+
+@media (max-width: 950px) {
   .drop-down {
-    width: 90%; /* Adjust width for smaller screens */
-    left: 5%; /* Center the dropdown */
+    width: 85%; /* Adjust width for smaller screens */
+    left: -32%; /* Align to the left */
     top: 100%; /* Position below the button */
   }
-}
 
-@media (max-width: 480px) {
-  .btn-wrapper {
-    margin-right: 1rem;
-    margin-top: 1rem;
+  .add-btn {
+    width: 5rem;
+    margin: 1rem 1rem;
   }
 
-  .drop-down {
-    width: 100%; /* Full width on very small screens */
-    left: 0; /* Align to the left */
-    top: 100%; /* Position below the button */
+  .create-module-title,
+  .add-link-title,
+  .upload-title {
+    font-size: var(--font-size-normal);
+  }
+
+  .create-module > img,
+  .add-link > img,
+  .upload > img {
+    height: 1.2rem;
+    width: 1.2rem;
   }
 }
