@@ -228,3 +228,22 @@
     color: black;
   }
 }
+
+
+@media (max-width: 600px){
+  .app-name {
+    font-size: var(--font-size-xlarge);
+  }
+}
+
+@media (max-width: 500px){
+  .app-name {
+    font-size: var(--font-size-medium);
+  }
+}
+
+@media (max-width: 400px){
+  .app-name {
+    font-size: var(--font-size-small);
+  }
+}

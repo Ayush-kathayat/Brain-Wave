@@ -97,15 +97,24 @@
 
 
 @media (max-width: 950px) {
+
+
+  
+
   .drop-down {
     width: 85%; /* Adjust width for smaller screens */
-    left: -32%; /* Align to the left */
+    left: -18%; 
     top: 100%; /* Position below the button */
   }
 
   .add-btn {
-    width: 5rem;
+    height: 1.5rem;
+    width: 4rem;
     margin: 1rem 1rem;
+  }
+
+  .add-btn > h1{
+    font-size: var(--font-size-normal);
   }
 
   .create-module-title,
@@ -121,3 +130,9 @@
     width: 1.2rem;
   }
 }
+
+
+/* @media (max-width: 500px) {
+  
+} */
+

@@ -25,7 +25,7 @@ const AddResources = () => {
           onClick={toggleDropdown}
         >
           <div className="add-btn" style={{ transition: "color 0.5s ease" }}>
-            Add
+            <h1>Add</h1>
             <img src="arrow-down.svg" alt="" />
           </div>
         </div>
