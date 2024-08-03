@@ -5,11 +5,32 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Components
 import Nav from "../../components/Navbar";
 import AddResources from "@/components/AddResources";
+import Modal from "@/components/modal";
 
 import "./home.css";
 
 const Home = () => {
   const [data, setData] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  // State variables for modal content
+  const [modalHeading, setModalHeading] = useState("");
+  const [modalHashMap, setModalHashMap] = useState(new Map()); //! this will contain the subheading and the placeholder for the input field
+
+  const handleOpenModal = (heading, modalHashMap) => {
+    setModalHeading(heading);
+    setModalHashMap(modalHashMap);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
+  const handleSubmitModal = () => {
+    // Handle submit logic
+    setModalOpen(false);
+  };
   return (
     <>
       <Nav />
@@ -24,8 +45,10 @@ const Home = () => {
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
-          s>
-            <AddResources />
+            s
+          >
+            <AddResources onOpenModal={handleOpenModal} />
+
             <div className="nothing-here-wrapper">
               <img
                 className="nothing-here-svg"
@@ -41,6 +64,16 @@ const Home = () => {
           </div>
         )}
       </div>
+
+
+      {isModalOpen && (
+        <Modal
+          heading={modalHeading}
+          hash_map={modalHashMap}
+          onCancel={handleCloseModal}
+          onSubmit={handleSubmitModal}
+        />
+      )}
     </>
   );
 };

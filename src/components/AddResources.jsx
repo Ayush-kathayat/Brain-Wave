@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./addResources.css";
 
-const AddResources = () => {
+const AddResources = ({ onOpenModal }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
+  };
+
+  const handleOpenModal = (heading, hash_map) => {
+    onOpenModal(heading, hash_map);
+    setDropdownVisible(false); // Close the dropdown after opening the modal
   };
 
   return (
@@ -32,17 +37,29 @@ const AddResources = () => {
 
         {isDropdownVisible && (
           <div className="drop-down">
-            <div className="create-module">
+            <div
+              className="create-module"
+              onClick={() =>
+                handleOpenModal("Create New Module", {
+                  "Module Name": "Enter Module Name",
+                })
+              }
+            >
               <img src="./folder.svg" alt="module" />
               <h1 className="create-module-title"> Create Module</h1>
             </div>
-            
-            <div className="add-link">
+
+            <div className="add-link"  onClick={() =>
+                handleOpenModal("Add New Link", {
+                  "URL": "Enter URL",
+                  "Display Name": "Enter Display Name",
+                })
+              }>
               <img src="./link.svg" alt="" />
               <h1 className="add-link-title">Add a Link</h1>
             </div>
 
-            <div className="upload">
+            <div className="upload">  
               <img src="./upload.svg" alt="" />
               <h1 className="upload-title">Upload</h1>
             </div>
