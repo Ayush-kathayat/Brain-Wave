@@ -18,10 +18,10 @@ const Modal = ({ heading, hash_map, onCancel, onSubmit }) => {
           ))}
 
         <div className="modal-btns">
-          <button className="modal-btn cancel" onClick={onCancel}>
+          <button className="modal-btn cancel btn" onClick={onCancel}>
             Cancel
           </button>
-          <button className="modal-btn submit" onClick={onSubmit}>
+          <button className="modal-btn submit btn" onClick={onSubmit}>
             Submit
           </button>
         </div>
