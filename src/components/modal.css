@@ -79,3 +79,76 @@ The fourth value is for margin-left. */
   background-color: var(--accent);
   color: var(--background);
 }
+
+/* responsive code ahead */
+
+.modal-heading {
+  font-size: var(--font-size-huge);
+}
+
+.modal-subheading {
+  font-size: var(--font-size-large);
+}
+
+.modal-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.52rem;
+  font-size: var(--font-size-normal);
+}
+
+@media (max-width: 1400px) {
+  .modal-heading {
+    font-size: var(--font-size-huge);
+  }
+
+  .modal-subheading {
+    font-size: var(--font-size-large);
+  }
+
+  .modal-input {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .modal-content {
+    width: 35%;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal-content {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal-content {
+    width: 65%;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal-content {
+    width: 100%;
+  }
+
+  .modal-heading {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .modal-subheading {
+    font-size: var(--font-size-medium);
+  }
+
+  .modal-input {
+    padding: 0.5rem;
+  }
+}
