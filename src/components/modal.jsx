@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import validUrl from "valid-url";
 import "./modal.css";
 
 const Modal = ({ heading, hash_map, onCancel, onSubmit }) => {
@@ -12,6 +13,10 @@ const Modal = ({ heading, hash_map, onCancel, onSubmit }) => {
   const onSubmitForm = (data) => {
     onSubmit(data);
   };
+
+  const validateURL = (value) => {
+    return validUrl.isUri(value) ? true : "Invalid URL";
+  }
 
   return (
     <div className="modal-overlay">
@@ -33,10 +38,7 @@ const Modal = ({ heading, hash_map, onCancel, onSubmit }) => {
                     value === "Enter URL"
                       ? {
                           required: `${key} is required`,
-                          pattern: {
-                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                            message: "Invalid email address",
-                          },
+                          validate: validateURL,
                         }
                       : {
                           required: `${key} is required`,

@@ -29,7 +29,8 @@
     "react-toastify": "^10.0.5",
     "react-use": "^17.5.0",
     "slick-carousel": "^1.8.1",
-    "tslib": "^2.6.2"
+    "tslib": "^2.6.2",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "@types/node": "^20.14.12",
