@@ -39,16 +39,19 @@ const Home = () => {
       <div className="home-wrapper">
         {data ? (
           <>
+
+            <Box />
+            <Box />
             <Box />
           </>
         ) : (
           <div
             className="nothing-here-container"
             data-aos="fade-down"
-            data-aos-delay="50"
-            data-aos-duration="1000"
+            data-aos-delay="60"
+            data-aos-duration="2000"
             data-aos-easing="ease-in-out"
-            s
+            
           >
             <AddResources onOpenModal={handleOpenModal} />
 
