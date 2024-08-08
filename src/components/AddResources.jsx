@@ -3,9 +3,11 @@ import "./addResources.css";
 
 const AddResources = ({ onOpenModal }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [isAddButtonClicked, setIsAddButtonClicked] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
+    setIsAddButtonClicked(!isAddButtonClicked);
   };
 
   const handleOpenModal = (heading, hash_map) => {
@@ -31,7 +33,11 @@ const AddResources = ({ onOpenModal }) => {
         >
           <div className="add-btn" style={{ transition: "color 0.5s ease" }}>
             <h1>Add</h1>
-            <img src="triangle-down.svg" alt="" />
+            {isAddButtonClicked ? (
+              <img src="triangle-down.svg" alt="" />
+            ) : (
+              <img src="triangle-up.svg" alt="" />
+            )}
           </div>
         </div>
 
@@ -49,17 +55,20 @@ const AddResources = ({ onOpenModal }) => {
               <h1 className="create-module-title"> Create Module</h1>
             </div>
 
-            <div className="add-link"  onClick={() =>
+            <div
+              className="add-link"
+              onClick={() =>
                 handleOpenModal("Add New Link", {
-                  "URL": "Enter URL",
+                  URL: "Enter URL",
                   "Display Name": "Enter Display Name",
                 })
-              }>
+              }
+            >
               <img src="./link.svg" alt="" />
               <h1 className="add-link-title">Add a Link</h1>
             </div>
 
-            <div className="upload">  
+            <div className="upload">
               <img src="./upload.svg" alt="" />
               <h1 className="upload-title">Upload</h1>
             </div>
