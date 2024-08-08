@@ -31,7 +31,7 @@ const AddResources = ({ onOpenModal }) => {
         >
           <div className="add-btn" style={{ transition: "color 0.5s ease" }}>
             <h1>Add</h1>
-            <img src="arrow-down.svg" alt="" />
+            <img src="triangle-down.svg" alt="" />
           </div>
         </div>
 
