@@ -6,11 +6,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "../../components/Navbar";
 import AddResources from "@/components/AddResources";
 import Modal from "@/components/modal";
+import Box from "@/components/box";
 
 import "./home.css";
 
 const Home = () => {
-  const [data, setData] = useState(false);
+  const [data, setData] = useState(true);
   const [isModalOpen, setModalOpen] = useState(false);
 
   // State variables for modal content
@@ -37,7 +38,9 @@ const Home = () => {
 
       <div className="home-wrapper">
         {data ? (
-          <></>
+          <>
+            <Box />
+          </>
         ) : (
           <div
             className="nothing-here-container"
@@ -64,7 +67,6 @@ const Home = () => {
           </div>
         )}
       </div>
-
 
       {isModalOpen && (
         <Modal
