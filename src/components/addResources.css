@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: flex-end;
   position: relative; /* Ensure the dropdown is positioned relative to this wrapper */
 }
 
@@ -46,7 +46,7 @@
   width: 100%; /* Full width on smaller screens */
   max-width: 20rem; /* Maximum width */
   top: 100%; /* Position below the button */
-  left: -41%;
+  left: 76.4%;
   background-color: var(--secondary);
   border: 1px solid var(--visited);
   border-radius: 15px;
@@ -95,15 +95,10 @@
 
 /* Media Queries for Responsiveness */
 
-
 @media (max-width: 950px) {
-
-
-  
-
   .drop-down {
     width: 85%; /* Adjust width for smaller screens */
-    left: -18%; 
+    left: -18%;
     top: 100%; /* Position below the button */
   }
 
@@ -113,7 +108,7 @@
     margin: 1rem 1rem;
   }
 
-  .add-btn > h1{
+  .add-btn > h1 {
     font-size: var(--font-size-normal);
   }
 
@@ -130,6 +125,3 @@
     width: 1.2rem;
   }
 }
-
-
-

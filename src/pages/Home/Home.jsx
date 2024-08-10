@@ -11,15 +11,22 @@ import Box from "@/components/box";
 import "./home.css";
 
 const Home = () => {
-  const [data, setData] = useState(true);
+  const [data, setData] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
 
   // State variables for modal content
   const [modalHeading, setModalHeading] = useState("");
   const [modalHashMap, setModalHashMap] = useState(new Map()); //! this will contain the subheading and the placeholder for the input field
 
-  const handleOpenModal = (heading, modalHashMap) => {
+  const [modulesName, setModulesNames] = useState([]); // array of strings
+  const [URL, setURL] = useState([]); // array of strings
+  const [description, setDescription] = useState([]); // array of strings
+  const [icon, setIcon] = useState([]); // array of strings
+
+  const handleOpenModal = (heading, description,icon, modalHashMap) => {
     setModalHeading(heading);
+    setDescription(description);
+    setIcon(icon);
     setModalHashMap(modalHashMap);
     setModalOpen(true);
   };
@@ -28,21 +35,44 @@ const Home = () => {
     setModalOpen(false);
   };
 
-  const handleSubmitModal = () => {
-    // Handle submit logic
+  const handleSubmitModal = (data) => {
+    // Handle submit logic here
+    // console.log(data);
+    // {Module Name: 'Artificial intelligence'}
+    // {URL: 'https://port-mafia.netlify.app', DisplayName: 'Portfolio of Ayush'}
+
+    if ("Module Name" in data) {
+      setModulesNames((prevModules) => [...prevModules, data]);
+    }
+
+    if ("Display Name" in data) {
+      setURL((prevURL) => [...prevURL, data.URL]);
+      setModulesNames((prevModules) => [...prevModules, data]);
+    }
+
+    // Update the state of data
+    if (data) {
+      setData(true);
+    }
+
     setModalOpen(false);
   };
   return (
     <>
       <Nav />
+      <AddResources onOpenModal={handleOpenModal} />
 
       <div className="home-wrapper">
         {data ? (
           <>
-
-            <Box />
-            <Box />
-            <Box />
+            {modulesName.map((module, index) => (
+              <Box
+                key={index}
+                module={module}
+                description={module.description}
+                icon={module.icon}
+              />
+            ))}
           </>
         ) : (
           <div
@@ -51,10 +81,7 @@ const Home = () => {
             data-aos-delay="60"
             data-aos-duration="2000"
             data-aos-easing="ease-in-out"
-            
           >
-            <AddResources onOpenModal={handleOpenModal} />
-
             <div className="nothing-here-wrapper">
               <img
                 className="nothing-here-svg"
@@ -74,6 +101,8 @@ const Home = () => {
       {isModalOpen && (
         <Modal
           heading={modalHeading}
+          description={description}
+          icon={icon}
           hash_map={modalHashMap}
           onCancel={handleCloseModal}
           onSubmit={handleSubmitModal}

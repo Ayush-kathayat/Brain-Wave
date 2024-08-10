@@ -1,6 +1,7 @@
+import React from 'react';
 import "./box.css";
 
-const Box = () => {
+const Box = ({ module, description, icon }) => {
   return (
     <>
       <div
@@ -11,22 +12,21 @@ const Box = () => {
         data-aos-easing="ease-in-out"
       >
         {/* this grabber icon will only appear here when someone hovers over the box container */}
-
-        <div className="grabber-icon-wrapper ">
+        <div className="grabber-icon-wrapper">
           <img src="./grabber.svg" alt="grab me" />
         </div>
 
         <div className="box-content">
           <div className="box-right">
             <div className="box-icon">
-              <img src="./folder.svg" alt="box-icon" />
+              <img src={icon} alt="box-icon" />
             </div>
             <div className="box-content-info">
               <h2 className="box-content-info-title">
-                ARTIFICIAL INTELLIGENCE
+              {module['Display Name'] || module['Module Name']}
               </h2>
               <p className="box-content-info-description">
-                Add Items To This Module
+                {description}
               </p>
             </div>
           </div>
