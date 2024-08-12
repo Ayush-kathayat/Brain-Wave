@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./addResources.css";
+import ActionPanel from "./actionPanel";
 
 const AddResources = ({ onOpenModal }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -41,38 +42,10 @@ const AddResources = ({ onOpenModal }) => {
         </div>
       </div>
 
+
+      {/* This in here it should be a component named action panel that is what i have to do today change it into a component */}
       {isDropdownVisible && (
-        <div className="drop-down">
-          <div
-            className="create-module"
-            onClick={() =>
-              handleOpenModal("Create New Module", "Add Item To This Module", "./folder.svg", {
-                "Module Name": "Enter Module Name",
-              })
-            }
-          >
-            <img src="./folder.svg" alt="module" />
-            <h1 className="create-module-title"> Create Module</h1>
-          </div>
-
-          <div
-            className="add-link"
-            onClick={() =>
-              handleOpenModal("Add New Link", "LINk", "./link.svg", {
-                "URL": "Enter URL",
-                "Display Name": "Enter Display Name",
-              })
-            }
-          >
-            <img src="./link.svg" alt="" />
-            <h1 className="add-link-title">Add a Link</h1>
-          </div>
-
-          <div className="upload">
-            <img src="./upload.svg" alt="" />
-            <h1 className="upload-title">Upload</h1>
-          </div>
-        </div>
+        <ActionPanel/>
       )}
     </div>
   );

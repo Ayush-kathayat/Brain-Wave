@@ -1,0 +1,45 @@
+
+.action-panel {
+  position: absolute;
+  height: auto; /* Adjust as needed */
+  width: 100%; /* Full width on smaller screens */
+  max-width: 20rem; /* Maximum width */
+  top: 100%; /* Position below the button */
+  left: 76.4%;
+  background-color: var(--secondary);
+  border: 1px solid var(--visited);
+  border-radius: 15px;
+  padding: 1rem;
+  margin-top: 1rem;
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-wrapper {
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  transition: background-color 0.5s ease;
+  display: flex;
+  align-items: center;
+  opacity: 0.6;s
+  cursor: pointer;
+}
+
+.action-wrapper > img {
+  margin-left: 1rem;
+}
+
+.action-wrapper > h1 {
+  font-size: var(--font-size-large);
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.5s ease;
+  font-family: var(--cta-font);
+  font-weight: var(--font-weight-bolder);
+}
+
+.action-wrapper:hover {
+  opacity: 1;
+  background-color: var(--background);
+}
