@@ -1,17 +1,17 @@
-
+/* Action Panel Component */
 .action-panel {
   position: absolute;
-  height: auto; /* Adjust as needed */
-  width: 100%; /* Full width on smaller screens */
-  max-width: 20rem; /* Maximum width */
-  top: 100%; /* Position below the button */
-  left: 76.4%;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 20rem;
   background-color: var(--secondary);
   border: 1px solid var(--visited);
   border-radius: 15px;
   padding: 1rem;
   margin-top: 1rem;
-  z-index: 1000; /* Ensure it appears above other elements */
+  z-index: 1000;
   transition: all 0.5s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -22,7 +22,7 @@
   transition: background-color 0.5s ease;
   display: flex;
   align-items: center;
-  opacity: 0.6;s
+  opacity: 0.6;
   cursor: pointer;
 }
 

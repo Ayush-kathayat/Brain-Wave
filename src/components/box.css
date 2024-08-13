@@ -17,7 +17,6 @@
   padding: 0.8rem;
   margin: 1rem;
   width: 90%;
-  /* max-width: 500px; */
   display: flex;
   flex-direction: row;
   transition: all 0.3s ease;
@@ -54,6 +53,7 @@
 
 /* below is the css for the grabber icon */
 
+/* Grabber Icon */
 .grabber-icon-wrapper {
   border-radius: 5px;
   display: flex;
@@ -91,3 +91,4 @@
   background-color: var(--background);
   transition: all 0.3s ease;
 }
+

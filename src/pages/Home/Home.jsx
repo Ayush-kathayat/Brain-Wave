@@ -23,7 +23,12 @@ const Home = () => {
   const [description, setDescription] = useState([]); // array of strings
   const [icon, setIcon] = useState([]); // array of strings
 
-  const handleOpenModal = (heading, description,icon, modalHashMap) => {
+  const [openPanelIndex, setOpenPanelIndex] = useState(null);
+  const toggleActionPanel = (index) => {
+    setOpenPanelIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const handleOpenModal = (heading, description, icon, modalHashMap) => {
     setModalHeading(heading);
     setDescription(description);
     setIcon(icon);
@@ -71,6 +76,9 @@ const Home = () => {
                 module={module}
                 description={module.description}
                 icon={module.icon}
+                onOpenModal={handleOpenModal}
+                isOpen={openPanelIndex === index}
+                onToggle={() => toggleActionPanel(index)}
               />
             ))}
           </>

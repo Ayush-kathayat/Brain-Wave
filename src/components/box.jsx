@@ -1,7 +1,12 @@
-import React from 'react';
+import { useState } from "react";
 import "./box.css";
 
-const Box = ({ module, description, icon }) => {
+import ActionPanel from "./actionPanel";
+
+const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
+  const handleOpenModal = (heading, description, icon, hash_map) => {
+    onOpenModal(heading, description, icon, hash_map);
+  };
   return (
     <>
       <div
@@ -23,19 +28,19 @@ const Box = ({ module, description, icon }) => {
             </div>
             <div className="box-content-info">
               <h2 className="box-content-info-title">
-              {module['Display Name'] || module['Module Name']}
+                {module["Display Name"] || module["Module Name"]}
               </h2>
-              <p className="box-content-info-description">
-                {description}
-              </p>
+              <p className="box-content-info-description">{description}</p>
             </div>
           </div>
 
-          <div className="box-content-more-icon">
+          <div className="box-content-more-icon" onClick={onToggle}>
             <img src="./more-vertical.svg" alt="more-icon" />
           </div>
         </div>
       </div>
+      {/* render the action panel component in here */}
+      {isOpen && <ActionPanel handleOpenModal={handleOpenModal} />}
     </>
   );
 };
