@@ -42,7 +42,7 @@ const Home = () => {
 
   const handleSubmitModal = (data) => {
     // Handle submit logic here
-    // console.log(data);
+    console.log(data);
     // {Module Name: 'Artificial intelligence'}
     // {URL: 'https://port-mafia.netlify.app', DisplayName: 'Portfolio of Ayush'}
 
