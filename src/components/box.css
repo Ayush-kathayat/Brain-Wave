@@ -8,6 +8,9 @@
   text-align: center;
   padding: 1rem;
   transition: all 0.3s ease;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  position: relative;
 }
 
 .box-content {
@@ -84,6 +87,8 @@
   padding: 0.5rem;
   border-radius: 5px;
   transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
 }
 
 .box-content-more-icon:hover {

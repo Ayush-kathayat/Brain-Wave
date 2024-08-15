@@ -9,7 +9,13 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
   };
 
   return (
-    <div className="box-container" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="400" data-aos-easing="ease-in-out">
+    <div
+      className="box-container"
+      data-aos="fade-down"
+      data-aos-delay="1000"
+      data-aos-duration="400"
+      data-aos-easing="ease-in-out"
+    >
       {/* this grabber icon will only appear here when someone hovers over the box container */}
       <div className="grabber-icon-wrapper">
         <img src="./grabber.svg" alt="grab me" />
@@ -29,12 +35,12 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
         </div>
 
         <div className="box-content-more-icon" onClick={onToggle}>
+          {isOpen && <ActionPanel handleOpenModal={handleOpenModal} className={"action-panel-box"}/>}
+
           <img src="./more-vertical.svg" alt="more-icon" />
         </div>
       </div>
 
-      {/* render the action panel component in here */}
-      {isOpen && <ActionPanel handleOpenModal={handleOpenModal} />}
     </div>
   );
 };

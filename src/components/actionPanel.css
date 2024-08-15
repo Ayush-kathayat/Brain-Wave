@@ -1,8 +1,7 @@
-
 .action-panel {
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 85.5%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 20rem;
@@ -14,6 +13,27 @@
   z-index: 1000;
   transition: all 0.5s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-panel-box {
+  position: absolute;
+  transform: translateX(-38%) translateY(65%);
+  width: 18rem;
+  max-width: 20rem;
+  background-color: var(--secondary);
+  border: 1px solid var(--visited);
+  border-radius: 15px;
+  padding: 1rem;
+  margin-top: 0.5rem; /* Adjust this if needed */
+  z-index: 1000;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box-content-more-icon:hover .action-panel-box,
+.box-content-more-icon:focus .action-panel-box {
+  opacity: 1; /* Show the tooltip */
+  visibility: visible; /* Show the tooltip */
 }
 
 .action-wrapper {
