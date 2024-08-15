@@ -35,7 +35,7 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
         </div>
 
         <div className="box-content-more-icon" onClick={onToggle}>
-          {isOpen && <ActionPanel handleOpenModal={handleOpenModal} className={"action-panel-box"}/>}
+          {isOpen && <ActionPanel handleOpenModal={handleOpenModal} className={"action-panel-box"} panelKey={"folder"}/>}
 
           <img src="./more-vertical.svg" alt="more-icon" />
         </div>
