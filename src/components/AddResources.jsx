@@ -45,7 +45,7 @@ const AddResources = ({ onOpenModal }) => {
 
       {/* This in here it should be a component named action panel that is what i have to do today change it into a component */}
       {isDropdownVisible && (
-        <ActionPanel handleOpenModal={handleOpenModal} className={"action-panel"} panelKey={"link"}/>
+        <ActionPanel handleOpenModal={handleOpenModal} className={"action-panel"} panelKey={"dropDown"}/>
       )}
     </div>
   );

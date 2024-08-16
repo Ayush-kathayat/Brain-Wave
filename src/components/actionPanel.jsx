@@ -34,14 +34,14 @@ const ActionPanel = ({ handleOpenModal, className, panelKey }) => {
         {
           heading: "Edit Module",
           description: "Add Item to this Module",
-          icon: "./folder.svg",
+          icon: "./edit.svg",
           title: "Edit Module Name",
           hash_map: {
             "Module Name": "Enter New Name",
           },
         },
         {
-          icon: "./delete.svg",
+          icon: "./trash-2.svg",
           title: "Delete",
           
         },
@@ -50,27 +50,23 @@ const ActionPanel = ({ handleOpenModal, className, panelKey }) => {
     {
       link: [
         {
-          heading: "Create Module",
-          description: "Add Item to this Module",
-          icon: "./folder.svg",
-          title: "Add a Module",
-          hash_map: {
-            "Module Name": "Enter Module Name",
-          },
-        },
-        {
-          heading: "Add New Link",
-          description: "LINk",
+          heading: "Edit",
+          description: "Link",
           icon: "./link.svg",
-          title: "Add a Link",
+          title: "Edit Link",
           hash_map: {
             URL: "Enter URL",
             "Display Name": "Enter Display Name",
           },
         },
         {
-          icon: "./upload.svg",
-          title: "Upload",
+          icon: "./external-link.svg",
+          title: "Go to Link",
+        },
+        {
+          icon: "./trash-2.svg",
+          title: "Delete",
+          
         },
       ],
     },

@@ -4,10 +4,15 @@ import "./box.css";
 import ActionPanel from "./actionPanel";
 
 const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
+  // const [panelKey, setPanelKey] = useState("");
+
+  let panelKey = icon.split("/").pop().split(".")[0];
+
+  console.log(`panelKey is ${panelKey}`);
+  // setPanelKey(key);
   const handleOpenModal = (heading, description, icon, hash_map) => {
     onOpenModal(heading, description, icon, hash_map);
   };
-
   return (
     <div
       className="box-container"
@@ -35,12 +40,17 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
         </div>
 
         <div className="box-content-more-icon" onClick={onToggle}>
-          {isOpen && <ActionPanel handleOpenModal={handleOpenModal} className={"action-panel-box"} panelKey={"folder"}/>}
+          {isOpen && (
+            <ActionPanel
+              handleOpenModal={handleOpenModal}
+              className={"action-panel-box"}
+              panelKey={panelKey}
+            />
+          )}
 
           <img src="./more-vertical.svg" alt="more-icon" />
         </div>
       </div>
-
     </div>
   );
 };
