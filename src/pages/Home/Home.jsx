@@ -65,7 +65,7 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <AddResources onOpenModal={handleOpenModal} />
+      <AddResources onOpenModal={handleOpenModal} handleSubmitModal={handleSubmitModal}/>
 
       <div className="home-wrapper">
         {data ? (
@@ -120,4 +120,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home ;

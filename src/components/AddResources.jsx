@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./addResources.css";
 import ActionPanel from "./actionPanel";
 
-const AddResources = ({ onOpenModal }) => {
+const AddResources = ({ onOpenModal , handleSubmitModal }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isAddButtonClicked, setIsAddButtonClicked] = useState(false);
 
@@ -12,15 +12,17 @@ const AddResources = ({ onOpenModal }) => {
     setIsAddButtonClicked(!isAddButtonClicked);
   };
 
-  const handleOpenModal = (heading, description , icon, hash_map) => {
+  const handleOpenModal = (heading, description, icon, hash_map) => {
     onOpenModal(heading, description, icon, hash_map);
     setDropdownVisible(false); // Close the dropdown after opening the modal
   };
 
+ 
+
   return (
     <div
       className="addResource-wrapper"
-      data-aos="fade-down"
+      data-aos="fade-down"s
       data-aos-delay="1000"
       data-aos-duration="400"
       data-aos-easing="ease-in-out"
@@ -42,10 +44,14 @@ const AddResources = ({ onOpenModal }) => {
         </div>
       </div>
 
-
       {/* This in here it should be a component named action panel that is what i have to do today change it into a component */}
       {isDropdownVisible && (
-        <ActionPanel handleOpenModal={handleOpenModal} className={"action-panel"} panelKey={"dropDown"}/>
+        <ActionPanel
+          handleOpenModal={handleOpenModal}
+          className={"action-panel"}
+          panelKey={"dropDown"}
+          handleSubmitModal={handleSubmitModal}
+        />
       )}
     </div>
   );

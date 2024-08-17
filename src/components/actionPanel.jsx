@@ -1,6 +1,22 @@
 import "./actionPanel.css";
+import { useState } from "react";
+import uploadFile from "@/utilities/fileUpload";
 
-const ActionPanel = ({ handleOpenModal, className, panelKey }) => {
+const ActionPanel = ({ handleOpenModal, className, panelKey, handleSubmitModal }) => {
+  const [fileData, setFileData] = useState(null);
+
+  const handleFileUpload = async () => {
+    try {
+      const fileInfo = await uploadFile();
+      setFileData(fileInfo);
+      handleSubmitModal(fileInfo);
+      // console.log("File Info:", fileInfo);
+      // You can now use fileInfo.name and fileInfo.description as needed
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const panelData = [
     {
       dropDown: [
@@ -43,7 +59,6 @@ const ActionPanel = ({ handleOpenModal, className, panelKey }) => {
         {
           icon: "./trash-2.svg",
           title: "Delete",
-          
         },
       ],
     },
@@ -66,13 +81,35 @@ const ActionPanel = ({ handleOpenModal, className, panelKey }) => {
         {
           icon: "./trash-2.svg",
           title: "Delete",
-          
+        },
+      ],
+    },
+    {
+      image: [
+        {
+          heading: "Edit",
+          description: "Link",
+          icon: "./link.svg",
+          title: "Edit Link",
+          hash_map: {
+            URL: "Enter URL",
+            "Display Name": "Enter Display Name",
+          },
+        },
+        {
+          icon: "./external-link.svg",
+          title: "Go to Link",
+        },
+        {
+          icon: "./trash-2.svg",
+          title: "Delete",
         },
       ],
     },
   ];
 
   const selectedPanel = panelData.find((panel) => panel[panelKey]);
+
 
   if (!selectedPanel) {
     return null;
@@ -86,14 +123,18 @@ const ActionPanel = ({ handleOpenModal, className, panelKey }) => {
         <div
           key={index}
           className="action-wrapper"
-          onClick={() =>
-            handleOpenModal(
-              data.heading,
-              data.description,
-              data.icon,
-              data.hash_map
-            )
-          }
+          onClick={() => {
+            if (data.title === "Upload") {
+              handleFileUpload();
+            } else {
+              handleOpenModal(
+                data.heading,
+                data.description,
+                data.icon,
+                data.hash_map
+              );
+            }
+          }}
         >
           <img src={data.icon} alt="module" />
           <h1>{data.title}</h1>
