@@ -2,6 +2,8 @@
 
 const uploadFile = () => {
   // const [iconi, setIconi] = useState("");
+
+
   return new Promise((resolve, reject) => {
     // Create an invisible file input element
     const input = document.createElement("input");
@@ -35,10 +37,12 @@ const uploadFile = () => {
       // }
 
       // Return the file information
+
+      
       const fileInfo = {
         "Module Name": fileName,
         description: fileExtension,
-        icon: "./image.svg",
+        icon: fileExtension === "pdf" ? "./file.svg" : "./image.svg",
       };
 
       resolve(fileInfo); // Resolve the promise with the fileInfo object

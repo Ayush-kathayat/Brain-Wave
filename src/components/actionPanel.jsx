@@ -2,7 +2,12 @@ import "./actionPanel.css";
 import { useState } from "react";
 import uploadFile from "@/utilities/fileUpload";
 
-const ActionPanel = ({ handleOpenModal, className, panelKey, handleSubmitModal }) => {
+const ActionPanel = ({
+  handleOpenModal,
+  className,
+  panelKey,
+  handleSubmitModal,
+}) => {
   const [fileData, setFileData] = useState(null);
 
   const handleFileUpload = async () => {
@@ -67,7 +72,7 @@ const ActionPanel = ({ handleOpenModal, className, panelKey, handleSubmitModal }
         {
           heading: "Edit",
           description: "Link",
-          icon: "./link.svg",
+          icon: "./edit.svg",
           title: "Edit Link",
           hash_map: {
             URL: "Enter URL",
@@ -89,16 +94,36 @@ const ActionPanel = ({ handleOpenModal, className, panelKey, handleSubmitModal }
         {
           heading: "Edit",
           description: "Link",
-          icon: "./link.svg",
-          title: "Edit Link",
+          icon: "./edit.svg",
+          title: "Rename",
           hash_map: {
-            URL: "Enter URL",
-            "Display Name": "Enter Display Name",
+            Name: "Enter New Name",
           },
         },
         {
-          icon: "./external-link.svg",
-          title: "Go to Link",
+          icon: "./download.svg",
+          title: "Download",
+        },
+        {
+          icon: "./trash-2.svg",
+          title: "Delete",
+        },
+      ],
+    },
+    {
+      file: [
+        {
+          heading: "Edit",
+          description: "Link",
+          icon: "./edit.svg",
+          title: "Rename",
+          hash_map: {
+            Name: "Enter New Name",
+          },
+        },
+        {
+          icon: "./download.svg",
+          title: "Download",
         },
         {
           icon: "./trash-2.svg",
@@ -109,7 +134,6 @@ const ActionPanel = ({ handleOpenModal, className, panelKey, handleSubmitModal }
   ];
 
   const selectedPanel = panelData.find((panel) => panel[panelKey]);
-
 
   if (!selectedPanel) {
     return null;
