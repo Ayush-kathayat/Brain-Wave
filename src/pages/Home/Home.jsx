@@ -64,7 +64,13 @@ const Home = () => {
   };
 
   const handleDeleteBox = (index) => {
-    setModulesNames((prevModules) => prevModules.filter((_, i) => i !== index));
+    setModulesNames((prevModules) => {
+      const updatedModules = prevModules.filter((_, i) => i !== index);
+      if (updatedModules.length === 0) {
+        setData(false);
+      }
+      return updatedModules;
+    });
   };
 
   return (
