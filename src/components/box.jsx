@@ -13,6 +13,11 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle, handleD
   const handleOpenModal = (heading, description, icon, hash_map) => {
     onOpenModal(heading, description, icon, hash_map);
   };
+
+  const handleNavigate = () => {
+    window.open(module.URL, "_blank");
+  };
+
   return (
     <div
       className="box-container"
@@ -47,6 +52,7 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle, handleD
               panelKey={panelKey}
               handleDelete={handleDelete}
               indexi={indexi}
+              handleNavigate={handleNavigate}
             />
           )}
 

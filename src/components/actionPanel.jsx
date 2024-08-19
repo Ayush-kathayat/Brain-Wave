@@ -9,6 +9,7 @@ const ActionPanel = ({
   handleSubmitModal,
   handleDelete,
   indexi,
+  handleNavigate,
 }) => {
   const [fileData, setFileData] = useState(null);
 
@@ -38,7 +39,7 @@ const ActionPanel = ({
         },
         {
           heading: "Add New Link",
-          description: "LINk",
+          description: "Link",
           icon: "./link.svg",
           title: "Add a Link",
           hash_map: {
@@ -152,7 +153,9 @@ const ActionPanel = ({
           onClick={() => {
             if (data.title === "Delete") {
               // alert("Delete");
-              handleDelete(indexi); // Pass the index to handleDeleteBox
+              handleDelete(indexi);
+            } else if (data.title === "Go to Link") {
+              handleNavigate();
             } else if (data.title === "Upload") {
               handleFileUpload();
             } else {
