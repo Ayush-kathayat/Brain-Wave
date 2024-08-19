@@ -3,7 +3,7 @@ import "./box.css";
 
 import ActionPanel from "./actionPanel";
 
-const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
+const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle, handleDelete, indexi}) => {
   // const [panelKey, setPanelKey] = useState("");
 
   let panelKey = icon.split("/").pop().split(".")[0];
@@ -45,6 +45,8 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle }) => {
               handleOpenModal={handleOpenModal}
               className={"action-panel-box"}
               panelKey={panelKey}
+              handleDelete={handleDelete}
+              indexi={indexi}
             />
           )}
 

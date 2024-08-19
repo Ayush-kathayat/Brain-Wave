@@ -7,6 +7,8 @@ const ActionPanel = ({
   className,
   panelKey,
   handleSubmitModal,
+  handleDelete,
+  indexi,
 }) => {
   const [fileData, setFileData] = useState(null);
 
@@ -148,7 +150,10 @@ const ActionPanel = ({
           key={index}
           className="action-wrapper"
           onClick={() => {
-            if (data.title === "Upload") {
+            if (data.title === "Delete") {
+              // alert("Delete");
+              handleDelete(indexi); // Pass the index to handleDeleteBox
+            } else if (data.title === "Upload") {
               handleFileUpload();
             } else {
               handleOpenModal(

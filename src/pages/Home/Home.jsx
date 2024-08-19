@@ -62,10 +62,18 @@ const Home = () => {
 
     setModalOpen(false);
   };
+
+  const handleDeleteBox = (index) => {
+    setModulesNames((prevModules) => prevModules.filter((_, i) => i !== index));
+  };
+
   return (
     <>
       <Nav />
-      <AddResources onOpenModal={handleOpenModal} handleSubmitModal={handleSubmitModal}/>
+      <AddResources
+        onOpenModal={handleOpenModal}
+        handleSubmitModal={handleSubmitModal}
+      />
 
       <div className="home-wrapper">
         {data ? (
@@ -79,6 +87,8 @@ const Home = () => {
                 onOpenModal={handleOpenModal}
                 isOpen={openPanelIndex === index}
                 onToggle={() => toggleActionPanel(index)}
+                handleDelete={handleDeleteBox}
+                indexi={index}
               />
             ))}
           </>
@@ -120,4 +130,4 @@ const Home = () => {
   );
 };
 
-export default Home ;
+export default Home;
