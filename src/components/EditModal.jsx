@@ -3,14 +3,9 @@ import { useForm } from "react-hook-form";
 import validUrl from "valid-url";
 import "./modal.css";
 
-const Modal = ({
-  heading,
-  description,
-  icon,
-  hash_map,
-  onCancel,
-  onSubmit,
-}) => {
+
+//! in here the onCancel , onSubmit these should be redefined in the Home.jsx file specifically for the EditModal component
+const EditModal = ({currentBoxTitle}) => {
   const {
     register,
     handleSubmit,
@@ -18,19 +13,8 @@ const Modal = ({
   } = useForm();
 
   const onSubmitForm = (data) => {
-    // Add description as a key to the data object
-    const updatedData = {
-      ...data,
-      description: description,
-      icon: icon,
-    };
-
-    // Pass the updated object to the onSubmit function
-    onSubmit(updatedData);
-
-    // Log the updated data
-    console.log(description);
-    console.log(updatedData);
+    alert(currentBoxTitle);
+    alert("EditModal.jsx onSubmitForm data: " + JSON.stringify(data));
   };
 
   const validateURL = (value) => {
@@ -65,16 +49,16 @@ const Modal = ({
                       key,
                       value === "Enter URL"
                         ? {
-                            required: `${key} is required`,
-                            validate: validateURL,
-                          }
+                          required: `${key} is required`,
+                          validate: validateURL,
+                        }
                         : {
-                            required: `${key} is required`,
-                            minLength: {
-                              value: 3,
-                              message: `${key} must be at least 3 characters`,
-                            },
-                          }
+                          required: `${key} is required`,
+                          minLength: {
+                            value: 3,
+                            message: `${key} must be at least 3 characters`,
+                          },
+                        }
                     )}
                   />
                   {errors[key] && (
@@ -101,4 +85,4 @@ const Modal = ({
   );
 };
 
-export default Modal;
+export default EditModal;

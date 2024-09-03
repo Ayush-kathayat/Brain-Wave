@@ -2,6 +2,8 @@ import "./actionPanel.css";
 import { useState } from "react";
 import uploadFile from "@/utilities/fileUpload";
 
+import EditModal from "./EditModal";
+
 const ActionPanel = ({
   handleOpenModal,
   className,
@@ -10,6 +12,7 @@ const ActionPanel = ({
   handleDelete,
   indexi,
   handleNavigate,
+  currentBoxTitle,
 }) => {
   const [fileData, setFileData] = useState(null);
 
@@ -158,6 +161,12 @@ const ActionPanel = ({
               handleNavigate();
             } else if (data.title === "Upload") {
               handleFileUpload();
+            } else if (
+              data.title === "Edit Module Name" ||
+              data.title === "Rename" ||
+              data.title === "Edit Link"
+            ) {
+              <EditModal currentBoxTitle={currentBoxTitle} />;
             } else {
               handleOpenModal(
                 data.heading,

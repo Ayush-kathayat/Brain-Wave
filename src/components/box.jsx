@@ -53,6 +53,7 @@ const Box = ({ module, description, icon, onOpenModal, isOpen, onToggle, handleD
               handleDelete={handleDelete}
               indexi={indexi}
               handleNavigate={handleNavigate}
+              currentBoxTitle={module["Display Name"] || module["Module Name"]}
             />
           )}
 
