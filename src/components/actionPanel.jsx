@@ -2,7 +2,6 @@ import "./actionPanel.css";
 import { useState } from "react";
 import uploadFile from "@/utilities/fileUpload";
 
-import EditModal from "./EditModal";
 
 const ActionPanel = ({
   handleOpenModal,
@@ -155,7 +154,6 @@ const ActionPanel = ({
           className="action-wrapper"
           onClick={() => {
             if (data.title === "Delete") {
-              // alert("Delete");
               handleDelete(indexi);
             } else if (data.title === "Go to Link") {
               handleNavigate();
@@ -166,8 +164,8 @@ const ActionPanel = ({
               data.title === "Rename" ||
               data.title === "Edit Link"
             ) {
-              <EditModal currentBoxTitle={currentBoxTitle} />;
-            } else {
+              alert(currentBoxTitle);
+s            } else {
               handleOpenModal(
                 data.heading,
                 data.description,
